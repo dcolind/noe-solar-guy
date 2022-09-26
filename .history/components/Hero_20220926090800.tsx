@@ -1,33 +1,33 @@
-import React from "react";
+import React from 'react'
 import BackgroundCircles from "./BackgroundCircles";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import Link from "next/link";
+import Link from 'next/link';
 
-type Props = {};
+type Props = {}
 
 function Hero({}: Props) {
-  const [text, count] = useTypewriter({
-    words: [
-      `Hi, The name's Noe`,
-      "....or, Noe the Solar Guy :)",
-      "Need a Solar Quote?",
-      "Or maybe grab some coffee?",
-    ],
-    loop: true,
-    delaySpeed: 2000,
-  });
+    const [text, count] = useTypewriter({
+        words: [
+          `Hi, The name's Noe`,
+          "....or, Noe the Solar Guy :)",
+          "Need a Solar Quote?",
+        ],
+        loop: true,
+        delaySpeed: 2000,
+
+      });
 
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
-      <BackgroundCircles />
-      <img
-        className="relative opacity-80 rounded-full h-40 w-40 mx-auto object-cover animate-pulse"
-        src="/images/noe.png"
+    <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
+      <BackgroundCircles />  
+    <img
+        className="relative rounded-full h-32 w-32 mx-auto object-cover"
+        src="/images"
         alt=""
       />
-      <div className="z-20 relative">
+      <div className='z-20 relative' >
         <h2 className='tracking-[15px] text-sm uppercase text-gray-500 pb-2"'>
-          Solar Guy
+            Solar Guy
         </h2>
         <h1 className="text-5xl lg:text-6xl font-semibold px-10 text-blue-100">
           <span className="mr-3">{text}</span>
@@ -35,9 +35,6 @@ function Hero({}: Props) {
         </h1>
 
         <div className="pt-5">
-          <Link href="#contact">
-            <button className="heroButton">Contact Me</button>
-          </Link>
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
@@ -45,13 +42,24 @@ function Hero({}: Props) {
           <Link href="#projects">
             <button className="heroButton">Accounts</button>
           </Link>
+
+          <Link href="#contact">
+            <button className="heroButton">Contact Me</button>
+          </Link>
+
           <Link href="">
             <button className="heroButton">Testimonials</button>
           </Link>
+
+          
+
+          
         </div>
+
       </div>
+
     </div>
-  );
+  )
 }
 
-export default Hero;
+export default Hero

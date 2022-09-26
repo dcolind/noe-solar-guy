@@ -1,23 +1,26 @@
-import React from "react";
+import React from 'react'
 import { useForm, SubmitHandler } from "react-hook-form";
 import { motion } from "framer-motion";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 
-type Props = {};
+type Props = {}
 
 function ContactMe({}: Props) {
+  
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       className="flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 h-screen justify-evenly mx-auto items-center"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl animate-pulse">
-        Contact Me
+
+<h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl ">Contact Me
       </h3>
 
       <div className="flex flex-col space-y-10 pt-40">
+        
+
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-blue-400 h-7 w-7 animate-pulse" />
@@ -33,13 +36,35 @@ function ContactMe({}: Props) {
           </div>
         </div>
 
-        <form onSubmit="" className="flex flex-col space-y-2 w-fit mx-auto">
+        <form
+          onSubmit=""
+          className="flex flex-col space-y-2 w-fit mx-auto"
+        >
           <div className="flex space-x-2">
-            <input className="contactInput" placeholder="Name" type="text" />
-            <input className="contactInput" placeholder="Email" type="text" />
+            <input
+              className="contactInput"
+              placeholder="Name"
+              type="text"
+            
+            />
+            <input
+              className="contactInput"
+              placeholder="Email"
+              type="text"
+              
+            />
           </div>
-          <input className="contactInput" placeholder="Subject" type="text" />
-          <textarea className="contactInput h-36" placeholder="Message" />
+          <input
+            className="contactInput"
+            placeholder="Subject"
+            type="text"
+            
+          />
+          <textarea
+            className="contactInput h-36"
+            placeholder="Message"
+           
+          />
 
           <button
             type="submit"
@@ -50,8 +75,9 @@ function ContactMe({}: Props) {
           </button>
         </form>
       </div>
+
     </motion.div>
-  );
+  )
 }
 
-export default ContactMe;
+export default ContactMe
